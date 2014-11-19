@@ -1,4 +1,4 @@
-# Mobile first blog theme for Hugo 
+# Mobile First Blog Theme for Hugo 
 
 It was created for my personal blog at [stou.dk](http://stou.dk)
 
@@ -21,6 +21,13 @@ If you have the requirements installed, you can get started like this
 
 Leave the last command running and run the hugo server in a different terminal.
 This will allow you to see the updates to you style changes using hugo's liveupdate.
+
+
+## Screenshots
+
+![index](images/tn.png)
+
+Here are [a few more screenshots](images/).
 
 ## License
 Open sourced under the MIT license.
