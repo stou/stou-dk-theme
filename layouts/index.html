@@ -1,0 +1,13 @@
+{{ partial "head.html" . }}
+<section>
+	<h1 class="title">Latest Posts</h1>
+	{{ range $element := first 6 .Data.Pages }}
+	{{ $element.Render "summary"}}
+	{{ end }}
+
+</section>
+
+{{ partial "taxonomies.html" . }}
+
+{{ partial "footer.html" . }}
+

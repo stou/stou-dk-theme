@@ -1,0 +1,18 @@
+<div class="panel clearfix">
+	<h4><a href="/post" title="All posts">More Blog Posts</a></h4>
+
+	<div class="medium-6 columns">	
+		<h5>Topics</h5>
+		{{ range .Site.Taxonomies.topics.ByCount }}
+		<span class="secondary radius label"><a href="/topics/{{ .Name | urlize }}">{{ .Name }}</a> ({{ .Count }})</span>
+		{{ end }}
+	</div>
+
+	<div class="medium-6 columns">	
+		<h5>Tags</h5>
+		{{ range .Site.Taxonomies.tags.ByCount }}
+		<span class="secondary radius label"><a href="/tags/{{ .Name | urlize }}">{{ .Name }}</a> ({{ .Count }})</span>
+		{{ end }}
+	</div>
+
+</div>

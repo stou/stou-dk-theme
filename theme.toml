@@ -1,0 +1,11 @@
+name = "stou-foundation"
+license = "MIT"
+source_repo = ""
+description = "An open source and mobile first theme based on Zurb Foundation"
+tags = ["blog", "company"]
+features = ["blog", ]
+
+[author]
+    name = "stou"
+    email = "rasmus.stougaard@gmail.com"
+    url = "http://stou.dk"

@@ -1,0 +1,14 @@
+{{ partial "head.html" . }}
+
+<section>
+  <div>
+   <h1 class="title">{{ .Title }}</h1>
+    {{ range .Data.Pages }}
+        {{ .Render "summary"}}
+    {{ end }}
+  </div>
+</section>
+
+{{ partial "taxonomies.html" . }}
+
+{{ partial "footer.html" }}

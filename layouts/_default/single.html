@@ -1,0 +1,28 @@
+{{ partial "head.html" .}}
+
+{{ $baseurl := .Site.BaseUrl }}
+<section>
+	<h1 class="title">{{ .Title }}</h1>
+	<div class="post-meta">{{ .Date.Format "Mon, Jan 2, 2006" }} - {{ .ReadingTime}} Minute read
+
+	{{ range .Params.tags }}
+		<span class="secondary radius label"> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">#{{ . }}</a> </span>
+	{{ end }}
+    </div>
+	<article>
+		{{ .Content }}
+	</article>
+</section>
+
+{{ partial "details.html" . }}
+{{ partial "disqus.html" . }}
+
+<div class="clearfix"></div>
+<div>
+<h2>Latest posts</h2>
+  {{ range $element := first 2 .Site.Recent }}
+  {{ $element.Render "summary"}}
+  {{ end }}
+</div>
+
+{{ partial "footer.html" .}}
