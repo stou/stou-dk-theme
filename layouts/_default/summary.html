@@ -1,4 +1,4 @@
-<article class="post clearfix">
+<article class="post clearfix{{ if .Draft }} draft{{ end }}">
 	{{if .Params.cover_image_url}}
 	<div class="medium-7 small-12 columns">
 		<a class="list-cover-image" href='{{ .Permalink }}'><img src="{{ .Params.cover_image_url }}" /></a>
@@ -11,7 +11,9 @@
 		<a href='{{ .Permalink }}'> {{ .Title }}</a>
 		</h2>
 		{{ with .Description }}<h6 class="subheader">{{ . }}</h6>{{ end }}
-		<div class="post-meta">{{ .Date.Format "Mon, Jan 2, 2006" }} - 
+		<div class="post-meta">
+		{{ if .Draft }}<span class="warning radius label">unpublished</span>{{ end }}
+		{{ .Date.Format "Mon, Jan 2, 2006" }} - 
 		<!-- {{ .FuzzyWordCount }} Words -->
 		{{ .ReadingTime}} Minute read
 		<!-- {{ with .Params.authorname }}by {{ . }}{{ end }} -->

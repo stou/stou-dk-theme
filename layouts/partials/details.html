@@ -33,7 +33,9 @@
 
     {{ with .Prev.Description }}<h6 class="subheader">{{ . }}</h6>{{ end }}
 
-    <p class="post-meta">{{ .Prev.Date.Format "Mon, Jan 2, 2006" }} - {{ .Prev.ReadingTime}} Minute read</p>
+    <p class="post-meta">
+    {{ if .Prev.Draft }}<span class="warning radius label">unpublished</span>{{ end }}
+    {{ .Prev.Date.Format "Mon, Jan 2, 2006" }} - {{ .Prev.ReadingTime}} Minute read</p>
     {{if not .Prev.Params.cover_image_url}}
     {{ with .Prev.Summary }}<p>{{ . }}</p>{{ end }}
     {{end}}
@@ -58,7 +60,9 @@
 
     {{ with .Next.Description }}<h6 class="subheader">{{ . }}</h6>{{ end }}
 
-    <p class="post-meta">{{ .Next.Date.Format "Mon, Jan 2, 2006" }} - {{ .Next.ReadingTime}} Minute read</p>
+    <p class="post-meta">
+      {{ if .Next.Draft }}<span class="warning radius label">unpublished</span>{{ end }}
+      {{ .Next.Date.Format "Mon, Jan 2, 2006" }} - {{ .Next.ReadingTime}} Minute read</p>
 
     {{if not .Next.Params.cover_image_url}}
     {{ with .Next.Summary }}<p>{{ . }}</p>{{ end }}
