@@ -15,7 +15,7 @@
 		{{ if .Draft }}<span class="warning radius label">unpublished</span>{{ end }}
 		{{ .Date.Format "Mon, Jan 2, 2006" }} - 
 		<!-- {{ .FuzzyWordCount }} Words -->
-		{{ .ReadingTime}} Minute read
+		{{ .ReadingTime}}&nbsp;Minute&nbsp;read
 		<!-- {{ with .Params.authorname }}by {{ . }}{{ end }} -->
 		</div>
 			{{ $baseurl := .Site.BaseUrl }}
