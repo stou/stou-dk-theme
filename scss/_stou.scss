@@ -59,6 +59,19 @@ section {
 		font-style: italic;
 		text-align: center;
 	}
+
+
+	.social-share-ui {
+
+		.twitter-share-button[style] { 
+			vertical-align: text-bottom !important;
+
+		}
+
+		.fb_like, .fb_iframe_widget {
+			vertical-align: text-bottom !important;
+    }
+	}
 }
 
 @media #{$small-only} {

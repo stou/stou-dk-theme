@@ -1,0 +1,41 @@
+
+{{if .Site.Params.facebook_app_id}}
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{{.Site.Params.facebook_app_id}}',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+{{end}}
+
+<span class="social-share-ui">
+
+{{if .Site.Params.facebook_app_id}}
+	<div
+		class="fb-like"
+  	data-href="{{.Permalink}}"
+  	data-share="true"
+	  data-layout="button_count"
+	  data-show-faces="true">
+	</div>
+{{end}}
+
+{{if .Site.Params.twitter_share_via }}
+	<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="{{.Site.Params.twitter_share_via}}"></a> <script>
+
+window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+</script>
+{{end}}
+
+</span>
