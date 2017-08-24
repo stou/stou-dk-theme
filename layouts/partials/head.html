@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <base href="{{ .Site.BaseUrl }}">
+  <base href="{{ .Site.BaseURL }}">
   <title>{{with .Title }}{{ . }} - {{end}}{{.Site.Title}} </title>
   <link rel="stylesheet" href="/css/app.css" />
   <link href="/css/lightbox.css" rel="stylesheet" />
   <script src="/bower_components/modernizr/modernizr.js"></script>
   <link rel="alternate" type="application/atom+xml" 
   title="RSS Feed for stou.dk" 
-  href="{{ .Site.BaseUrl }}/rss.xml" />
+  href="{{ .Site.BaseURL }}/rss.xml" />
 
   {{ partial "meta.html" . }}
   

@@ -7,7 +7,7 @@
 	<div class="medium-8 small-12 columns">
 	<h3><a class="post-list-title" href="{{ .Permalink }}">{{ .Title }}</a>
 	<!-- <small>{{ with .Params.authorname }}by {{ . }}{{ end }}</small> --></h3>
-	{{ $baseurl := .Site.BaseUrl }}
+	{{ $baseurl := .Site.BaseURL }}
 	{{ range .Params.tags }}
 		<span class="secondary radius label"> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">#{{ lower . }}</a> </span>
 	{{ end }}

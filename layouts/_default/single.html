@@ -1,8 +1,6 @@
-{{ partial "head.html" .}}
+{{ partial "head.html" . }}
 
-
-
-{{ $baseurl := .Site.BaseUrl }}
+{{ $baseurl := .Site.BaseURL }}
 <section>
 	<h1 class="title">{{ .Title }}</h1>
 	<div class="post-meta">
@@ -30,9 +28,9 @@
 <div class="clearfix"></div>
 <div>
 <h2>Latest posts</h2>
-  {{ range $element := first 2 .Site.Recent }}
+  {{ range $element := first 2 .Site.Pages }}
   {{ $element.Render "summary"}}
   {{ end }}
 </div>
 
-{{ partial "footer.html" .}}
+{{ partial "footer.html" . }}
