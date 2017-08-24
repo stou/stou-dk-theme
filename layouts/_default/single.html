@@ -7,7 +7,7 @@
 	{{ if .Draft }}<span class="warning radius label">unpublished</span>{{ end }}
 	{{ .Date.Format "Mon, Jan 2, 2006" }} - {{ .ReadingTime}} Minute read
 	{{ range .Params.tags }}
-		<span class="secondary radius label"> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">#{{ . }}</a> </span>
+		<span class="secondary radius label"> <a href="{{ $baseurl }}tags/{{ . | urlize }}">#{{ . }}</a> </span>
 	{{ end }}
 	
 

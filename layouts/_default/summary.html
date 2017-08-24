@@ -20,7 +20,7 @@
 		</div>
 			{{ $baseurl := .Site.BaseURL }}
 	{{ range .Params.tags }}
-		<span class="secondary radius label"> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">#{{ lower . }}</a> </span>
+		<span class="secondary radius label"> <a href="{{ $baseurl }}tags/{{ . | urlize }}">#{{ lower . }}</a> </span>
 	{{ end }}
 
 	</header>
