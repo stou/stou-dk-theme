@@ -1,0 +1,66 @@
+
+
+- head.html
+    - meta.html
+    - nav-bar-right.html
+    - nav-bar-left.html
+
+
+# Blog post:
+
+
+/tags/...
+    - tag.html
+        - head.html
+        - summary.html
+        - taxonomies.html
+        - footer.html
+
+/topics/...
+    - topic.html
+        - head.html
+        - summary.html
+        - taxonomies.html
+        - footer.html
+
+ /post/...
+    - list.html (this is the default listing)
+        - head.html
+        - summary.html
+        - taxonomies.html
+        - footer.html
+
+    - single.html
+        - head.html
+        - social-sharing-buttons.html
+        - details.html
+        - disqus.html
+        - summary.html
+        - footer.html
+
+
+    - post.html
+        - head.html
+        - li.html
+        - footer.html
+
+    - project.html
+        - head.html
+        - summary.html
+        - footer.html
+
+/work/...
+    - work.html
+        - head.html
+        - li.html
+        - footer.html
+
+
+/??/...
+    - taxonomy.html
+        - head.html
+        - footer.html
+
+
+# not used
+    - device-info.html  this is for debugging the device break points
