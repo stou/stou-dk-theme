@@ -1,0 +1,6 @@
+{{/* golang style comments like this works for shortcodes and templates,
+    but not inside markdown content.
+    inspired by: https://stackoverflow.com/questions/45224766/how-to-comment-out-content-in-hugo
+    */}}
+<!-- html comments are stripped in shortcodes but not in markdown -->
+{{ if .Inner }}{{ end }}
